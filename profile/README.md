@@ -13,8 +13,7 @@
 <p align="center">
   <a href="https://github.com/skyflo-ai/skyflo">Get Started</a> •
   <a href="https://github.com/skyflo-ai/skyflo/tree/main/docs">Documentation</a> •
-  <a href="https://skyflo.ai/community">Community</a> •
-  <a href="https://skyflo.ai/blog">Blog</a>
+  <a href="https://skyflo.ai/community">Community</a>
 </p>
 
 ---
@@ -77,11 +76,9 @@ Please follow our [contributing guidelines](https://github.com/skyflo-ai/skyflo/
 
 ## 📚 Resources
 
+- [Installation Guide](https://github.com/skyflo-ai/skyflo/blob/main/docs/install.md)
+- [Architecture](https://github.com/skyflo-ai/skyflo/blob/main/docs/architecture.md)
 - [Website](https://skyflo.ai)
-- [Documentation](https://skyflo.ai/docs)
-- [Getting Started Guide](https://skyflo.ai/docs/getting-started)
-- [API Reference](https://skyflo.ai/docs/api)
-- [Release Notes](https://skyflo.ai/docs/releases)
 
 ## 📄 License
 
