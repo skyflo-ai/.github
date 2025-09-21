@@ -4,72 +4,89 @@
   </a>
 </h1>
 
-<h3 align="center">AI-Powered Natural Language Management for Kubernetes</h3>
+<h3 align="center">Your DevOps Copilot: Kubernetes, Jenkins, and More</h3>
 
-<p align="center">
-  Skyflo.ai enables DevOps engineers to use natural language to manage, monitor, and optimize their Kubernetes clusters.
-</p>
+Skyflo.ai is an AI co‑pilot for Cloud & DevOps that unifies Kubernetes operations and CI/CD systems (starting with Jenkins) behind a natural‑language interface with a safety‑first, human‑in‑the‑loop design. Instead of memorizing CLI commands or clicking through UIs, just tell Skyflo what you want in natural language.
 
-<p align="center">
-  <a href="https://github.com/skyflo-ai/skyflo">Get Started</a> •
-  <a href="https://github.com/skyflo-ai/skyflo/tree/main/docs">Documentation</a> •
-  <a href="https://skyflo.ai/community">Community</a>
-</p>
+### 💡 What it can do
 
----
+#### Troubleshoot fast
 
-## ✨ What is Skyflo.ai?
+```text
+Show me the last 200 lines of logs for checkout in production. If there are errors, summarize them.
+```
 
-Skyflo.ai is an AI-powered platform for Kubernetes management that enables users to leverage our intelligent agent for Kubernetes environments. Instead of memorizing complex CLI commands or navigating console UIs, simply tell Skyflo what you want to do in natural language.
+#### Safer rollouts and rollbacks
 
-Skyflo.ai follows an open-core business model with both community and enterprise offerings:
+```text
+Progressively canary rollout auth-backend in dev through 10/25/50/100 steps
+```
 
-- **Community Edition**: Free, open-source core functionality
-- **Enterprise Edition**: Premium features with enhanced security, compliance, and multi-cloud capabilities
+#### Jenkins at conversational speed
 
-## 🚀 Key Features
+```text
+Trigger backend/build with BRANCH=release/2025-09 and ENV=staging. Poll for logs and let me know if something goes wrong.
+```
 
-- **Natural Language Interface**: Manage cloud resources using simple English commands
-- **Intelligent Agents**: Purpose-built agents for Kubernetes environments
-- **Safe Operations**: Read-only mode by default, with opt-in write permissions
-- **CLI Integration**: Generate and execute kubectl commands automatically
-- **Decision Routing**: Intelligent workflow routing for creating, updating, deleting, and fetching resources
-- **Enterprise Grade**: Built for security, compliance, and scale
+### 🎯 Who is Skyflo.ai for?
 
+Skyflo.ai is purpose-built for:
 
-## 📦 Repository
+- **DevOps Engineers**
+- **Cloud Architects**
+- **IT Managers**
+- **SRE Teams**
+- **Security Professionals**
 
-All components of Skyflo.ai are now consolidated into a single repository:
+### 🚀 Key Features
 
-| Repository | Purpose | License |
-|---|---|---|
-| [skyflo](https://github.com/skyflo-ai/skyflo) | Unified repository containing the core platform, APIs, and agents | Apache 2.0 |
+- **Unified AI Copilot**: One agent for K8s, Jenkins, Helm, and Argo Rollouts
+- **Human-in-the-loop Design**: Approval required for any mutating operation
+- **Plan → Execute → Verify**: Iterative loop where the agent keeps going untill the task is done 
+- **Real-time Streaming**: Everything that the agent does is streamed to the UI in real time
+- **MCP-based tool execution**: Standardized tools for safe, consistent actions
+- **Built for Teams**: Manage teams, integrations, rate limiting and much more
 
-## 🎯 Who is Skyflo.ai for?
+## ⚡ Quick Start
 
-Skyflo.ai is designed for:
+Install Skyflo.ai in your Kubernetes cluster using a single command:
 
-- **DevOps Engineers**: Streamline infrastructure management
-- **Cloud Architects**: Design and optimize cloud environments
-- **IT Managers**: Maintain oversight and control costs
-- **SRE Teams**: Ensure reliability and performance
-- **Security Professionals**: Enforce security policies and compliance
+```bash
+curl -sL https://raw.githubusercontent.com/skyflo-ai/skyflo/main/deployment/install.sh -o install.sh && chmod +x install.sh && ./install.sh
+```
 
-## 🤝 Contributing
+See the [Installation Guide](https://github.com/skyflo-ai/skyflo/blob/main/docs/install.md) for details.
 
-We welcome contributions to Skyflo.ai! Whether you're fixing bugs, improving documentation, or proposing new features, your contributions are appreciated.
+### 🛠️ Supported Tools
+
+- **Kubernetes**: Resource discovery; get/describe; logs/exec; safe apply/diff flows
+- **Jenkins**: Jobs, builds, logs, SCM info
+- **Argo Rollouts**: Inspect status; pause/resume; promote/cancel; analyze delivery
+- **Helm**: Search, install/upgrade/rollback with dry-run and diff-first safety
+
+### 🧩 Components
+
+- **Engine**: FastAPI + LangGraph workflow with approvals and SSE streaming
+- **MCP Server**: FastMCP tools for `kubectl`, `argo` (Rollouts), `helm`, `jenkins`
+- **Command Center (UI)**: Next.js UI written in TypeScript and designed using Tailwind
+
+Refer to the [architecture](https://github.com/skyflo-ai/skyflo/blob/main/docs/architecture.md) for more details.
+
+### 🤝 Contributing
+
+Join the mission to build the future of AI in DevOps! Whether you're fixing bugs, improving documentation, or proposing new features, your contributions are very much appreciated.
 
 1. **Fork** the repository
-2. **Create** a feature branch: `git checkout -b feature/amazing-feature`
+2. **Create** a feature branch: `git checkout -b feature/issue-number-description`
 3. **Commit** your changes: `git commit -m 'feat: add amazing feature'`
-4. **Push** to the branch: `git push origin feature/amazing-feature`
+4. **Push** to the branch: `git push origin feature/issue-number-description`
 5. **Submit** a pull request
 
 Please follow our [contributing guidelines](https://github.com/skyflo-ai/skyflo/blob/main/CONTRIBUTING.md) and [code of conduct](https://github.com/skyflo-ai/skyflo/blob/main/CODE_OF_CONDUCT.md).
 
-## 🌐 Community
+### 🌐 Community
 
-- Join our [Discord](https://discord.com/invite/kCFNavMund) server
+- Join our [Discord](https://discord.gg/kCFNavMund) server
 - Follow us on [X](https://x.com/skyflo_ai)
 - Subscribe to our [YouTube](https://www.youtube.com/@skyfloai) channel
 - Read our [blog](https://skyflo.ai/blog) for the latest updates
@@ -82,6 +99,4 @@ Please follow our [contributing guidelines](https://github.com/skyflo-ai/skyflo/
 
 ## 📄 License
 
-Skyflo.ai is open-source and licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
-
-See the LICENSE file in the repository for specific details.
+Skyflo.ai is open source and licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
